@@ -34,13 +34,28 @@ public class Ranking {
         movie.setRanking(last_index_position + 1);
     }
 
-    public String findMovieByTitle(Movie movie){
+    public String findMovieByTitle(String title){
         for(Movie the_movie : rankings){
-            if (movie.title() == the_movie.title()){
+            if (title == the_movie.title()){
                 return the_movie.toString();
             }
         }
         return "movie not found";
     }
 
+//    public void sortMoviesByRanking(Movie[] movies {
+//        boolean sorted = false;
+//        Movie temp;
+//        while(sorted == false){
+//            sorted = true;
+//            for (int i = 0, i < 9, i++){
+//                if (movies[i].getRanking() > movies[i + 1].getRanking()){
+//                    temp = movies[i];
+//                    movies[i] = movies[i + 1];
+//                    movies[i + 1] = temp;
+//                    sorted = false;
+//                }
+//            }
+//        }
+//    }
 }
